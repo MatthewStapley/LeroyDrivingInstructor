@@ -1,0 +1,59 @@
+---
+import { site } from "../data/site";
+
+const navLinks = [
+  { href: "#reviews", label: "Reviews" },
+  { href: "#pupils", label: "Passed Pupils" },
+  { href: "#prices", label: "Prices" },
+  { href: "#instructor", label: "Meet Leroy" },
+  { href: "#faqs", label: "FAQs" },
+];
+---
+
+<header class="sticky top-0 z-40 border-b border-charcoal-800/10 bg-paper/90 backdrop-blur">
+  <div
+    id="scroll-progress"
+    class="absolute inset-x-0 top-0 h-[3px] origin-left scale-x-0 bg-yellow-500 transition-transform duration-150 ease-out"
+    aria-hidden="true"
+  ></div>
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4 lg:px-8">
+    <a href="#top" class="flex items-center gap-2 font-display text-lg font-semibold tracking-tight text-charcoal-950">
+      Leroy
+      <span class="rounded-md bg-charcoal-950 px-1.5 py-0.5 text-sm text-yellow-400">Driving Instructor</span>
+    </a>
+
+    <nav class="hidden items-center gap-8 lg:flex" aria-label="Primary">
+      {navLinks.map((link) => (
+        <a
+          href={link.href}
+          class="text-sm font-medium text-charcoal-600 transition-colors hover:text-charcoal-950"
+        >
+          {link.label}
+        </a>
+      ))}
+    </nav>
+
+    <div class="hidden items-center gap-3 lg:flex">
+      <a
+        href={site.phoneHref}
+        class="text-sm font-semibold text-charcoal-800 hover:text-charcoal-950"
+      >
+        {site.phone}
+      </a>
+      <a
+        href="#contact"
+        class="rounded-full bg-yellow-500 px-5 py-2.5 text-sm font-semibold text-charcoal-950 shadow-sm shadow-yellow-500/30 transition-transform hover:-translate-y-0.5 hover:bg-yellow-400"
+      >
+        Check Availability
+      </a>
+    </div>
+
+    <a
+      href={site.phoneHref}
+      class="flex items-center gap-2 rounded-full bg-charcoal-950 px-4 py-2 text-sm font-semibold text-white lg:hidden"
+      aria-label={`Call ${site.name} on ${site.phone}`}
+    >
+      Call now
+    </a>
+  </div>
+</header>

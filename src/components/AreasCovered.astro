@@ -1,0 +1,26 @@
+---
+import { areasCovered } from "../data/content";
+---
+
+<section class="bg-paper py-20 sm:py-24">
+  <div class="mx-auto max-w-6xl px-5 lg:px-8">
+    <div class="reveal flex flex-col items-center gap-4 text-center">
+      <span class="text-xs font-semibold uppercase tracking-wide text-yellow-600">Areas Covered</span>
+      <h2 class="font-display text-3xl font-semibold text-charcoal-950 sm:text-4xl">
+        Driving lessons across Brighton &amp; Hove
+      </h2>
+    </div>
+
+    <div class="reveal mt-8 flex flex-wrap items-center justify-center gap-3">
+      {areasCovered.map((area) => (
+        <span class="inline-flex items-center gap-1.5 rounded-full border border-charcoal-800/15 bg-white px-4 py-2 text-sm font-medium text-charcoal-800 shadow-sm">
+          {area.name}
+        </span>
+      ))}
+    </div>
+
+    <p class="reveal mt-6 text-center text-xs text-charcoal-400">
+      Get in touch to check availability in your part of Brighton &amp; Hove.
+    </p>
+  </div>
+</section>

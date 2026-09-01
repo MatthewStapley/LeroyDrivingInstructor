@@ -1,0 +1,101 @@
+---
+import { Image } from "astro:assets";
+import heroPhoto from "../assets/images/leroy-hero.png";
+import { site } from "../data/site";
+---
+
+<section id="top" class="relative overflow-hidden bg-charcoal-950 pb-16 pt-10 sm:pb-24 sm:pt-14 lg:pt-16">
+  <div
+    class="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-yellow-500/60 to-transparent"
+    aria-hidden="true"
+  ></div>
+  <div
+    class="pointer-events-none absolute -right-24 top-24 h-72 w-72 rounded-full bg-yellow-500/10 blur-3xl"
+    aria-hidden="true"
+  ></div>
+
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1.1fr_0.9fr] lg:gap-10 lg:px-8">
+    <div class="reveal">
+      <span class="inline-flex items-center gap-2 rounded-full border border-yellow-500/30 bg-yellow-500/10 px-4 py-1.5 text-xs font-semibold uppercase tracking-wide text-yellow-400">
+        Manual Lessons &middot; Brighton &amp; Hove
+      </span>
+
+      <h1 class="mt-6 font-display text-4xl font-semibold leading-[1.05] text-white sm:text-5xl lg:text-[3.4rem]">
+        Driving Instructor in Brighton &amp; Hove
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg text-charcoal-300">
+        Calm, patient manual driving lessons with Leroy — backed by over 20 years of teaching experience.
+      </p>
+
+      <div class="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <a
+          href={site.phoneHref}
+          class="inline-flex items-center justify-center gap-2 rounded-full bg-yellow-500 px-7 py-3.5 text-base font-semibold text-charcoal-950 shadow-lg shadow-yellow-500/20 transition-transform hover:-translate-y-0.5 hover:bg-yellow-400"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+            <path d="M4.5 4h3.4l1.6 4.5-2 1.5a12 12 0 0 0 6.5 6.5l1.5-2 4.5 1.6v3.4a2 2 0 0 1-2.2 2A17 17 0 0 1 2.5 6.2 2 2 0 0 1 4.5 4Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+          Call Leroy
+        </a>
+        <a
+          href={site.whatsappHref}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 px-7 py-3.5 text-base font-semibold text-white transition-colors hover:border-white/40"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5" aria-hidden="true">
+            <path d="M12 3a9 9 0 0 0-7.8 13.4L3 21l4.7-1.2A9 9 0 1 0 12 3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+          WhatsApp Leroy
+        </a>
+      </div>
+
+      <a href="#contact" class="mt-4 inline-block text-sm font-semibold text-charcoal-300 underline decoration-charcoal-600 underline-offset-4 hover:text-white">
+        Check Availability
+      </a>
+
+      <div class="mt-10 flex flex-wrap items-center gap-x-8 gap-y-3 text-sm text-charcoal-400">
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5 text-yellow-500" aria-hidden="true">
+            <path d="M9 12.5 11 15l4.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          20+ years of experience
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5 text-yellow-500" aria-hidden="true">
+            <path d="M9 12.5 11 15l4.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Evenings &amp; weekends
+        </div>
+        <div class="flex items-center gap-2">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-5 w-5 text-yellow-500" aria-hidden="true">
+            <path d="M9 12.5 11 15l4.5-6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          </svg>
+          Local test-route knowledge
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal relative mx-auto w-full max-w-sm lg:max-w-none" style="animation-delay: 120ms">
+      <div class="absolute -inset-3 -z-10 rounded-[2rem] bg-gradient-to-br from-yellow-500/25 via-transparent to-transparent blur-2xl" aria-hidden="true"></div>
+      <div data-parallax class="overflow-hidden rounded-[1.75rem] border border-white/10 shadow-2xl shadow-black/40 will-change-transform">
+        <Image
+          src={heroPhoto}
+          alt="Leroy's manual driving lesson car in Brighton"
+          widths={[400, 700, 1000]}
+          sizes="(min-width: 1024px) 480px, 90vw"
+          class="h-full w-full object-cover"
+          loading="eager"
+        />
+      </div>
+      <div class="absolute -bottom-5 left-5 right-5 rounded-2xl border border-charcoal-800 bg-charcoal-900/95 px-5 py-4 shadow-xl backdrop-blur sm:left-8 sm:right-auto">
+        <p class="text-xs uppercase tracking-wide text-charcoal-400">Lessons from</p>
+        <p class="font-display text-2xl font-semibold text-white">£40<span class="text-sm font-medium text-charcoal-400">/hour</span></p>
+      </div>
+    </div>
+  </div>
+</section>

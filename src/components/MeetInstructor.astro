@@ -1,0 +1,51 @@
+---
+// No photo of Leroy is used here by request — this section is intentionally
+// text-led, with a stat card filling the visual space a photo would take.
+const credibilityPoints = [
+  "20+ years of experience",
+  "Manual driving lessons",
+  "Calm, learner-focused tuition",
+];
+---
+
+<section id="instructor" class="bg-paper py-20 sm:py-24">
+  <div class="mx-auto grid max-w-6xl items-center gap-12 px-5 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:px-8">
+    <div class="reveal">
+      <span class="text-xs font-semibold uppercase tracking-wide text-yellow-600">Meet Your Instructor</span>
+      <h2 class="mt-3 font-display text-3xl font-semibold text-charcoal-950 sm:text-4xl">
+        Over 20 years of teaching experience
+      </h2>
+      <p class="mt-5 text-charcoal-700">
+        For more than two decades, Leroy has helped learners across Brighton &amp; Hove build confidence behind the
+        wheel. Lessons are calm, patient and tailored to the individual — from complete beginners to drivers
+        returning after a break.
+      </p>
+
+      <ul class="mt-8 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+        {credibilityPoints.map((point) => (
+          <li class="flex items-center gap-2 rounded-full border border-charcoal-800/10 bg-white px-4 py-2 text-sm font-semibold text-charcoal-800 shadow-sm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" class="h-4 w-4 shrink-0 text-yellow-600" aria-hidden="true">
+              <path d="M9 12.5 11 15l4.5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            {point}
+          </li>
+        ))}
+      </ul>
+
+      <a
+        href="#contact"
+        class="mt-8 inline-flex items-center justify-center rounded-full bg-charcoal-950 px-7 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5"
+      >
+        Get in Touch with Leroy
+      </a>
+    </div>
+
+    <div class="reveal" style="animation-delay: 120ms">
+      <div class="mx-auto flex max-w-sm flex-col items-center justify-center gap-2 rounded-[1.75rem] border border-charcoal-800/10 bg-charcoal-950 px-10 py-14 text-center shadow-xl">
+        <span class="font-display text-6xl font-semibold text-yellow-500 sm:text-7xl">20+</span>
+        <span class="text-sm font-medium uppercase tracking-wide text-charcoal-300">Years Teaching Learners to Drive</span>
+        <span class="mt-4 text-xs text-charcoal-400">in Brighton &amp; Hove</span>
+      </div>
+    </div>
+  </div>
+</section>

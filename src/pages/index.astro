@@ -1,0 +1,34 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import MobileContactBar from "../components/MobileContactBar.astro";
+import Hero from "../components/Hero.astro";
+import GoogleReviews from "../components/GoogleReviews.astro";
+import WhyChooseLeroy from "../components/WhyChooseLeroy.astro";
+import PassedPupils from "../components/PassedPupils.astro";
+import Pricing from "../components/Pricing.astro";
+import MeetInstructor from "../components/MeetInstructor.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import AreasCovered from "../components/AreasCovered.astro";
+import FAQs from "../components/FAQs.astro";
+import ContactSection from "../components/ContactSection.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <Header />
+  <main class="pb-16 lg:pb-0">
+    <Hero />
+    <GoogleReviews />
+    <WhyChooseLeroy />
+    <PassedPupils />
+    <Pricing />
+    <MeetInstructor />
+    <HowItWorks />
+    <AreasCovered />
+    <FAQs />
+    <ContactSection />
+  </main>
+  <Footer />
+  <MobileContactBar />
+</Layout>
