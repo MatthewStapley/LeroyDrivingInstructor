@@ -7,7 +7,7 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://www.leroysdrivingschool.uk',
+  site: 'https://leroydrivinginstructor.co.uk',
   vite: {
     plugins: [tailwindcss()]
   },
