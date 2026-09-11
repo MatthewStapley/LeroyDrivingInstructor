@@ -32,6 +32,6 @@ export const faqs: Faq[] = [
   {
     question: "How do I book a lesson?",
     answer:
-      "Call or WhatsApp 07725 000856, or send an email — Leroy will get back to you to arrange your first lesson and talk through the best package for you.",
+      "Call or WhatsApp 07725 000856 — Leroy will get back to you to arrange your first lesson and talk through the best package for you.",
   },
 ];

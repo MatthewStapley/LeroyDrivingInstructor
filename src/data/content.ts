@@ -44,7 +44,7 @@ export interface Step {
 export const howItWorks: Step[] = [
   {
     title: "Get in touch",
-    description: "Call, WhatsApp or email to say hello and share a little about your experience so far.",
+    description: "Call or WhatsApp to say hello and share a little about your experience so far.",
   },
   {
     title: "Arrange your first lesson",
